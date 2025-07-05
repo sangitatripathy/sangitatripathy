@@ -21,6 +21,7 @@
   <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
   <img src="https://img.shields.io/badge/PL/SQL-01529E?style=for-the-badge&logo=oracle&logoColor=white" />
+  <img src="https://img.shields.io/badge/JWT-JSON%20Web%20Token-yellow?style=for-the-badge&logo=jsonwebtokens&logoColor=black" />
 </p>
 
 <p align="left">
