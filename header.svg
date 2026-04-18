@@ -1,76 +1,80 @@
 <svg width="850" height="400" viewBox="0 0 850 400" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0f172a" />
-            <stop offset="100%" stop-color="#020617" />
-        </linearGradient>
-        <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#22d3ee" />
-            <stop offset="100%" stop-color="#3b82f6" />
-        </linearGradient>
-        <style>
-            @keyframes slideIn {
-                from { opacity: 0; transform: translateX(-20px); }
-                to { opacity: 1; transform: translateX(0); }
-            }
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            @keyframes pulseBorder {
-                0%, 100% { stroke-opacity: 0.2; }
-                50% { stroke-opacity: 0.5; }
-            }
-            .slide { animation: slideIn 0.8s ease-out forwards; }
-            .fade { animation: fadeIn 1.2s ease-in forwards; }
-            .pulse { animation: pulseBorder 3s infinite; }
-        </style>
-    </defs>
+  <defs>
+    <linearGradient id="gryffindor-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a0505" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
 
-    <rect width="850" height="400" fill="url(#mainGradient)" rx="12"/>
-    <path d="M 0 400 L 850 0" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+    <linearGradient id="gold-text" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700" />
+      <stop offset="100%" stop-color="#b8860b" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;family=Spectral:wght@400;600&amp;display=swap');
+      
+      .name-style { font-family: 'Cinzel', serif; fill: url(#gold-text); filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4)); }
+      .tag-style { font-family: 'Spectral', serif; fill: #d4af37; letter-spacing: 1.5px; }
+      
+      /* Floating Sparks/Embers Animation */
+      @keyframes float {
+        0%, 100% { transform: translateY(0) opacity: 0.3; }
+        50% { transform: translateY(-15px) opacity: 0.8; }
+      }
+      .particle { animation: float 4s ease-in-out infinite; fill: #ffd700; }
+      
+      /* Code Typing / Magical Trail Effect */
+      @keyframes dash {
+        to { stroke-dashoffset: 0; }
+      }
+      .code-magic {
+        stroke: #ffd700;
+        stroke-width: 1;
+        fill: none;
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+        animation: dash 5s linear infinite;
+        opacity: 0.4;
+      }
+    </style>
+  </defs>
+
+  <rect width="850" height="400" fill="url(#gryffindor-bg)" rx="15"/>
+
+  <g transform="translate(580, 100)">
+    <circle cx="100" cy="100" r="120" fill="#ffd700" opacity="0.03" filter="url(#glow)" />
     
-    <g transform="translate(60, 80)" class="slide">
-        <text x="0" y="0" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="48" font-weight="800">Sangita Tripathy</text>
-        <text x="0" y="38" fill="url(#accentCyan)" font-family="Segoe UI, sans-serif" font-size="22" font-weight="600" letter-spacing="2">FULL STACK DEVELOPER</text>
-        
-        <g transform="translate(0, 80)">
-            <text x="0" y="0" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="16">Experienced in building high-performance MERN applications</text>
-            <text x="0" y="24" fill="#94a3b8" font-family="Segoe UI, sans-serif" font-size="16">with a focus on RESTful APIs and real-time system optimization.</text>
-        </g>
-    </g>
+    <path d="M40,220 Q40,140 100,140 Q160,140 160,220" fill="#1a0a0a" stroke="#ffd700" stroke-width="0.5" opacity="0.6"/>
+    <circle cx="100" cy="110" r="25" fill="#1a0a0a" stroke="#ffd700" stroke-width="0.5" opacity="0.6"/>
+    
+    <path d="M70,210 L130,210 L145,235 L55,235 Z" fill="#2a0505" stroke="#ffd700" stroke-width="1" />
+    <rect x="75" y="170" width="50" height="35" rx="2" fill="#000" stroke="#ffd700" stroke-width="0.5" />
+    
+    <rect x="78" y="173" width="44" height="29" fill="#ffd700" opacity="0.1" filter="url(#glow)" />
+    
+    <path class="code-magic" d="M130,180 Q180,150 220,190" />
+    <path class="code-magic" d="M130,195 Q200,200 180,240" style="animation-delay: -2s;" />
+  </g>
 
-    <g transform="translate(580, 70)" class="fade">
-        <text x="0" y="0" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="1">CORE TECHNOLOGIES</text>
-        <g transform="translate(0, 30)">
-            <rect width="100" height="32" rx="6" fill="#1e293b" stroke="#334155" />
-            <text x="50" y="21" fill="#e2e8f0" font-family="Arial" font-size="13" text-anchor="middle">TypeScript</text>
-            
-            <rect x="110" width="80" height="32" rx="6" fill="#1e293b" stroke="#334155" />
-            <text x="150" y="21" fill="#e2e8f0" font-family="Arial" font-size="13" text-anchor="middle">React.js</text>
-            
-            <rect y="42" width="90" height="32" rx="6" fill="#1e293b" stroke="#334155" />
-            <text x="45" y="63" fill="#e2e8f0" font-family="Arial" font-size="13" text-anchor="middle">Node.js</text>
-            
-            <rect x="100" y="42" width="90" height="32" rx="6" fill="#1e293b" stroke="#334155" />
-            <text x="145" y="63" fill="#e2e8f0" font-family="Arial" font-size="13" text-anchor="middle">MongoDB</text>
-            
-            <rect y="84" width="190" height="32" rx="6" fill="#1e293b" stroke="#334155" />
-            <text x="95" y="105" fill="#e2e8f0" font-family="Arial" font-size="13" text-anchor="middle">Express &amp; REST APIs</text>
-        </g>
+  <g transform="translate(60, 150)">
+    <text x="0" y="0" class="name-style" font-size="52">Sangita Tripathy</text>
+    <text x="2" y="45" class="tag-style" font-size="18" font-weight="600">FULL STACK DEVELOPER</text>
+    
+    <g transform="translate(0, 90)">
+      <text x="0" y="0" font-family="'Spectral', serif" fill="#94a3b8" font-size="16">Building scalable web applications with MERN stack magic.</text>
+      <text x="0" y="24" font-family="'Spectral', serif" fill="#94a3b8" font-size="16">Optimizing high-performance APIs and real-time systems.</text>
     </g>
+  </g>
 
-    <g transform="translate(60, 300)" class="fade">
-        <text x="0" y="0" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" letter-spacing="1">KEY IMPACTS_</text>
-        <g transform="translate(0, 20)">
-            <rect width="180" height="40" rx="8" fill="#0c4a6e" class="pulse" stroke="#0ea5e9" stroke-width="1"/>
-            <text x="90" y="25" fill="#bae6fd" font-family="Arial" font-size="13" font-weight="600" text-anchor="middle">20% Perf. Improvement</text>
-            
-            <rect x="195" width="190" height="40" rx="8" fill="#1e1b4b" class="pulse" stroke="#6366f1" stroke-width="1"/>
-            <text x="290" y="25" fill="#e0e7ff" font-family="Arial" font-size="13" font-weight="600" text-anchor="middle">Real-time Kanban Engine</text>
-            
-            <rect x="400" width="180" height="40" rx="8" fill="#064e3b" class="pulse" stroke="#10b981" stroke-width="1"/>
-            <text x="490" y="25" fill="#d1fae5" font-family="Arial" font-size="13" font-weight="600" text-anchor="middle">Email Automation System</text>
-        </g>
-    </g>
+  <circle class="particle" cx="120" cy="100" r="1.5" style="animation-delay: 0s;" />
+  <circle class="particle" cx="400" cy="50" r="1" style="animation-delay: 1s;" />
+  <circle class="particle" cx="700" cy="300" r="2" style="animation-delay: 2s;" />
+  <circle class="particle" cx="50" cy="350" r="1.2" style="animation-delay: 0.5s;" />
+
+  <path d="M 60 360 L 400 360" stroke="#ffd700" stroke-width="0.5" opacity="0.3" stroke-dasharray="5 5" />
 </svg>
