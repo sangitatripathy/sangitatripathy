@@ -1,80 +1,62 @@
-<svg width="850" height="400" viewBox="0 0 850 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="400" viewBox="0 0 850 400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="gryffindor-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#2a0505" />
       <stop offset="100%" stop-color="#0a0a0a" />
     </linearGradient>
-
     <linearGradient id="gold-text" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ffd700" />
       <stop offset="100%" stop-color="#b8860b" />
     </linearGradient>
-
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="4" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
-
+    <clipPath id="imgClip">
+      <rect x="0" y="0" width="320" height="280" rx="15"/>
+    </clipPath>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;family=Spectral:wght@400;600&amp;display=swap');
-      
       .name-style { font-family: 'Cinzel', serif; fill: url(#gold-text); filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4)); }
       .tag-style { font-family: 'Spectral', serif; fill: #d4af37; letter-spacing: 1.5px; }
-      
-      /* Floating Sparks/Embers Animation */
       @keyframes float {
-        0%, 100% { transform: translateY(0) opacity: 0.3; }
-        50% { transform: translateY(-15px) opacity: 0.8; }
+        0%, 100% { transform: translateY(0); opacity: 0.3; }
+        50% { transform: translateY(-15px); opacity: 0.8; }
       }
       .particle { animation: float 4s ease-in-out infinite; fill: #ffd700; }
-      
-      /* Code Typing / Magical Trail Effect */
-      @keyframes dash {
-        to { stroke-dashoffset: 0; }
-      }
-      .code-magic {
-        stroke: #ffd700;
-        stroke-width: 1;
-        fill: none;
-        stroke-dasharray: 200;
-        stroke-dashoffset: 200;
-        animation: dash 5s linear infinite;
-        opacity: 0.4;
-      }
     </style>
   </defs>
 
   <rect width="850" height="400" fill="url(#gryffindor-bg)" rx="15"/>
 
-  <g transform="translate(580, 100)">
-    <circle cx="100" cy="100" r="120" fill="#ffd700" opacity="0.03" filter="url(#glow)" />
+  <g transform="translate(480, 60)">
+    <rect x="-5" y="-5" width="330" height="290" rx="20" fill="none" stroke="#ffd700" stroke-width="1" opacity="0.3" filter="url(#glow)"/>
     
-    <path d="M40,220 Q40,140 100,140 Q160,140 160,220" fill="#1a0a0a" stroke="#ffd700" stroke-width="0.5" opacity="0.6"/>
-    <circle cx="100" cy="110" r="25" fill="#1a0a0a" stroke="#ffd700" stroke-width="0.5" opacity="0.6"/>
-    
-    <path d="M70,210 L130,210 L145,235 L55,235 Z" fill="#2a0505" stroke="#ffd700" stroke-width="1" />
-    <rect x="75" y="170" width="50" height="35" rx="2" fill="#000" stroke="#ffd700" stroke-width="0.5" />
-    
-    <rect x="78" y="173" width="44" height="29" fill="#ffd700" opacity="0.1" filter="url(#glow)" />
-    
-    <path class="code-magic" d="M130,180 Q180,150 220,190" />
-    <path class="code-magic" d="M130,195 Q200,200 180,240" style="animation-delay: -2s;" />
+    <image 
+      href="https://raw.githubusercontent.com/sangitatripathy/sangitatripathy/main/image.png"
+      width="320" 
+      height="280"
+      preserveAspectRatio="xMidYMid slice"
+      clip-path="url(#imgClip)"
+    />
   </g>
 
   <g transform="translate(60, 150)">
-    <text x="0" y="0" class="name-style" font-size="52">Sangita Tripathy</text>
+    <text x="0" y="0" class="name-style" font-size="48">Sangita Tripathy</text>
     <text x="2" y="45" class="tag-style" font-size="18" font-weight="600">FULL STACK DEVELOPER</text>
     
-    <g transform="translate(0, 90)">
-      <text x="0" y="0" font-family="'Spectral', serif" fill="#94a3b8" font-size="16">Building scalable web applications with MERN stack magic.</text>
-      <text x="0" y="24" font-family="'Spectral', serif" fill="#94a3b8" font-size="16">Optimizing high-performance APIs and real-time systems.</text>
+    <g transform="translate(0, 95)">
+      <text x="0" y="0" font-family="'Spectral', serif" fill="#94a3b8" font-size="16">
+        Building scalable web applications with MERN stack magic.
+      </text>
+      <text x="0" y="24" font-family="'Spectral', serif" fill="#94a3b8" font-size="16">
+        Optimizing high-performance APIs and real-time systems.
+      </text>
     </g>
   </g>
 
   <circle class="particle" cx="120" cy="100" r="1.5" style="animation-delay: 0s;" />
   <circle class="particle" cx="400" cy="50" r="1" style="animation-delay: 1s;" />
-  <circle class="particle" cx="700" cy="300" r="2" style="animation-delay: 2s;" />
-  <circle class="particle" cx="50" cy="350" r="1.2" style="animation-delay: 0.5s;" />
-
+  <circle class="particle" cx="750" cy="350" r="2" style="animation-delay: 2s;" />
   <path d="M 60 360 L 400 360" stroke="#ffd700" stroke-width="0.5" opacity="0.3" stroke-dasharray="5 5" />
 </svg>
