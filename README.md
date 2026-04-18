@@ -1,60 +1,52 @@
-<h1 align="center">Hi 👋, I'm Sangita Tripathy</h1>
-<h3 align="center">A passionate Fullstack developer from India</h3>
-
-- 🌱 I’m currently learning **Nodejs,Next.js**
-
-- 💬 Ask me about **react,javascript**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-  <a href="https://linkedin.com/in/sangita-tripathy"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://www.leetcode.com/sangitatripathy183"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" /></a>
-</p>
-
----
-
-### 🧠 Programming Languages:
-<p>
-  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
-  <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-</p>
-
-
-### 🎨 Frontend Tools:
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" />
-</p>
-
-
-
-### 🛠 Backend Tools:
-<p>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/EJS-8FBC8F?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/JWT-JSON%20Web%20Token-yellow?style=for-the-badge&logo=jsonwebtokens&logoColor=black" />
-</p>
-
-
-
-### 🗄️ Database Tools:
-<p>
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/PL/SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
-  <img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongodb&logoColor=white" />
-</p>
-
----
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=sangitatripathy&show_icons=true&theme=radical" alt="Sangita's GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sangitatripathy&layout=compact&theme=radical" alt="Top Languages" />
-</p>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README - Harry Potter Fullstack Developer</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        header { background-color: #f0f0f0; padding: 20px; text-align: center; }
+        h1 { color: #4a0087; }
+        section { margin-top: 20px; }
+        .tech-stack { display: flex; justify-content: center; flex-wrap: wrap; }
+        .tech { margin: 5px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #e9ecef; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Harry Potter Fullstack Developer</h1>
+    <!-- Futuristic SVG Header Here -->
+</header>
+<section>
+    <h2>About Me</h2>
+    <p>Hello! I am a passionate fullstack developer with a love for creating immersive digital experiences. With a background reminiscent of the magic of Harry Potter, I strive to blend creativity with technology.</p>
+</section>
+<section>
+    <h2>Connect with Me</h2>
+    <p>You can find me on:
+        <ul>
+            <li><a href="https://github.com/sangitatripathy">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/sangitatripathy">LinkedIn</a></li>
+        </ul>
+    </p>
+</section>
+<section>
+    <h2>Tech Stacks</h2>
+    <div class="tech-stack">
+        <div class="tech">JavaScript</div>
+        <div class="tech">React</div>
+        <div class="tech">Node.js</div>
+        <div class="tech">Express</div>
+        <div class="tech">MongoDB</div>
+        <div class="tech">CSS</div>
+        <div class="tech">HTML</div>
+        <div class="tech">Python</div>
+    </div>
+</section>
+<section>
+    <h2>GitHub Stats</h2>
+    <p>[GitHub stats embed here]</p>
+</section>
+</body>
+</html>
